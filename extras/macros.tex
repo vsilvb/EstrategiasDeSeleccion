@@ -1,0 +1,71 @@
+%!TEX root = ../main/main.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage{xspace}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{MnSymbol}
+\usepackage{mathtools}
+\usepackage{textcomp}
+\usepackage{stmaryrd}
+\usepackage{varwidth}
+\usepackage{graphicx}
+\usepackage{mathrsfs} 
+
+\usepackage{tikz}
+\usetikzlibrary{automata, graphs,positioning,chains,arrows,snakes,decorations.pathmorphing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			COMMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{todonotes}
+\newcommand{\martin}[1]{\todo[inline, color=green!20]{{\bf Martin:} #1}}
+\newcommand{\cristian}[1]{\todo[inline, color=red!20]{{\bf Cristian:} #1}}
+
+%IF YOU WANT TO REMOVE COMMENTS, UNCOMMENT THE NEXT LINES
+%\renewcommand{\martin}[1]{}
+%\renewcommand{\cristian}[1]{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			SETS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cD}{\mathcal{D}}
+
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			ENVIROMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\paragraph}[1]{\smallskip
+	\noindent\textbf{#1}.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			ALGORITHMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\operatorname}[1]{\mathsf{#1}}
+
+\algrenewcommand\algorithmicindent{1.3em}%
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+
+
+

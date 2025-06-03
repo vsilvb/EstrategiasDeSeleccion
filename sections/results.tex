@@ -1,0 +1,75 @@
+%!TEX root = ../main/main.tex
+\paragraph{Deterministic eVA}
+Let \(E=(Q,q_{0},F,\delta)\) be an eVA.
+Its pair-based subset construction yields the deterministic eVA
+\[
+  E_{\det}\;=\;
+  \bigl(Q_{\det},\,X_{0},\,F_{\det},\,\Delta\bigr),
+\]
+
+with
+\begin{align*}
+  Q_{\det}      &\;=\; 2^{Q},\\
+  X_{0}         &\;=\; \{q_{0}\}, \\
+  F_{\det}      &\;=\; \{X\subseteq Q \mid X\cap F\neq\emptyset\},\\
+  \Delta(X,a,S) &\;=\; \{\,q' \mid \exists q\in X:\;(q,a,S,q')\in\delta\}.
+\end{align*}
+
+
+\paragraph{Selection strategy MAX}
+Given a deterministic extended variable automaton (eVA)
+$E_{\det}=(2^{Q},X_{0},F_{\det},\Delta)$, we define a new eVA 
+$$
+  E_{\max}\;=\;
+  \bigl(Q_{\max},\,(R_{0},W_{0}),\,F_{\max},\,\Delta_{\max}\bigr)
+$$
+that accepts exactly the mappings that are maximal under variable inclusion, where $Q_{max} = 2^Q \times 2^Q$ and 
+
+$$
+  Q_{\max}
+  \;=\;
+  \bigl\{\, (R,W)\mid R,W\subseteq Q_{\det}
+                 \text{ and } R\cap W=\emptyset \bigr\}.
+$$
+\medskip
+\noindent
+\textbf{Initial state.}\;
+\((R_{0},W_{0}) = (X_{0},\emptyset)\).
+
+\medskip
+\noindent
+\textbf{Transition function.} $R$ represents a set of "current" states of $E_{det}$ and $W$ represents the set of states of $E_{det}$ having a run that dominates the current run under variable inclusion.\\
+For \((R,W)\in Q_{\max}\), letter \(a\in\Sigma\cup\{\#\}\),  
+and marker set \(S\):
+
+
+$$
+  \Delta_{\max}\bigl((R,W),a,S\bigr)
+  \;=\  (R',W')
+$$
+where
+$$
+  R'=\Delta(R,a,S) \backslash W'
+  \quad\text{and}\quad
+  W'=\begin{cases}
+        \displaystyle
+        \Delta(W,a,S)\;\cup\;\bigcup_{S\neq\emptyset}\!\Delta(R,a,S') &
+            \text{if } S'=\emptyset,\\[6pt]
+        \displaystyle
+        \Delta(W,a,S)\;\cup\!
+        \bigcup_{\,S \subset S'}\!\Delta(R,a,S') &
+            \text{if } S\neq\emptyset.
+      \end{cases}
+$$
+
+\medskip
+\noindent
+\textbf{Final states.}
+$$
+  F_{\max}
+  \;=\;
+  \bigl\{\, (R,W)\in Q_{\max}\;\bigm|\;
+           R\cap F_{\det}\neq\emptyset \text{ and }
+           W\cap F_{\det}= \emptyset \bigr\}.
+$$
+

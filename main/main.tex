@@ -1,0 +1,43 @@
+\documentclass[a4paper,UKenglish]{lipics-v2021}
+
+\input{../extras/macros}
+\input{../extras/metadata}
+
+\begin{document}
+	
+	\maketitle
+	
+	\input{../extras/abstract}
+	
+	\section{Introduction}\label{sec:introduction}
+	
+	\input{../sections/intro}
+	
+	\section{Preliminaries}\label{sec:preliminaries}
+	
+	\input{../sections/preliminaries}
+	
+	\section{Main results}\label{sec:results}
+	
+	\input{../sections/results}
+	
+	\section{Conclusions}\label{sec:conclusions}
+	
+	\input{../sections/concl}
+	
+	\newpage
+	\bibliographystyle{abbrv}
+	\bibliography{../extras/biblio}
+	
+	\newpage
+	\appendix
+	
+	\section{Proofs from Section~\ref{sec:preliminaries}}
+	
+	\input{../appendix/app-preliminaries}
+	
+	\section{Proofs of Section~\ref{sec:results}}
+	
+	\input{../appendix/app-results}
+	
+\end{document}

@@ -1,0 +1,66 @@
+%!TEX root = main.tex
+
+\begin{figure}[t]
+	\centering
+	\begin{tikzpicture}[->,>=stealth',roundnode/.style={circle,draw,inner sep=1.2pt},squarednode/.style={rectangle,inner sep=2pt}, scale=1]
+		\node [squarednode] (c) at (1.12, -0.6) {$(a)$};
+		\node [squarednode] (0) at (0.8, 2.75) {$\textsf{union}$};
+		\node [squarednode] (6) at (-0.05, 2.75) {$v'\gets$};
+		\node [squarednode] (1) at (0, 1) {$v_1$};
+		\node [squarednode] (2) at (1.6, 1.75) {$\textsf{prod}$};
+		\node [squarednode] (3) at (1.6, 1) {$v_2$};
+		\node [squarednode] (4) at (0.8, 0) {$\epsilon$};
+		\node [squarednode] (5) at (2.4, 0) {$r(v_2)$};
+		\draw[dashed] (0) to[out=-135,in=90] (1);
+		\draw (0) to[out=-45,in=120] (2);
+		\draw (2) to[out=-45,in=90] (5);
+		\draw[dashed] (3) to[out=-135,in=60] (4);
+		\draw (3) to[out=-45,in=120] (5);
+		\draw[dashed] (2) to (1);
+	\end{tikzpicture}
+	\begin{tikzpicture}[->,>=stealth',roundnode/.style={circle,draw,inner sep=1.2pt},squarednode/.style={rectangle,inner sep=2pt}, scale=1]
+		\node [squarednode] (c) at (1.6, -0.6) {$(b)$};
+		\node [squarednode] (0) at (2.5, 2.75) {$\textsf{union}$};
+		\node [squarednode] (6) at (1.65, 2.75) {$v'\gets$};
+		\node [squarednode] (1) at (3, 1) {$v_2$};
+		\node [squarednode] (2) at (1.90, 1.75) {$\textsf{prod}$};
+		\node [squarednode] (3) at (0.85, 1) {$v_1$};
+		\node [squarednode] (4) at (0.2, 0) {$\epsilon$};
+		\node [squarednode] (5) at (1.5, 0) {$r(v_1)$};
+		\draw (0) to[out=-60,in=90] (1);
+		\draw[dashed] (0) to[out=-135,in=70] (2);
+		\draw[dashed] (2) to[out=-120,in=90] (5);
+		\draw[dashed] (3) to[out=-135,in=60] (4);
+		\draw (3) to[out=-45,in=120] (5);
+		\draw (2) to (1);
+	\end{tikzpicture}
+	\begin{tikzpicture}[->,>=stealth',roundnode/.style={circle,draw,inner sep=1.1pt},squarednode/.style={rectangle,inner sep=2pt},scale=1.1]
+		\node [squarednode] (c) at (1.6, -0.5) {$(c)$};
+		\node [squarednode] (0) at (1.5, 2.75) {$\cup$};
+		\node [squarednode] (11) at (0.88, 2.8) {$v'\gets$};
+		\node [squarednode] (1) at (0.75, 2.25) {$\epsilon$};
+		\node [squarednode] (2) at (2.25, 2.25) {$\textsf{union}$};
+		\node [squarednode] (3) at (3, 1.75) {$\textsf{union}$};
+		\node [squarednode] (4) at (2.1, 1) {$\textsf{prod}$};
+		\node [squarednode] (5) at (3.2, 1) {$v_2$};
+		\node [squarednode] (6) at (2.5, 0) {$\epsilon$};
+		\node [squarednode] (7) at (4, 0) {$r(v_2)$};
+		\node [squarednode] (8) at (0.5, 1) {$v_1$};
+		\node [squarednode] (9) at (0, 0) {$\epsilon$};
+		\node [squarednode] (10) at (1, 0) {$r(v_1)$};
+		\draw[dashed] (0) to (1);
+		\draw (0) to (2);
+		\draw[dashed] (2) to[out=-135,in=70] (10);
+		\draw[dashed] (4) to (10);
+		\draw (4) to[out=-45,in=145] (7);
+		\draw[dashed] (5) to[out=-135,in=60] (6);
+		\draw (5) to[out=-45,in=120] (7);
+		\draw (3) to[out=-45,in=90] (7);
+		\draw[dashed] (3) to (4);
+		\draw (2) to (3);
+		\draw (8) to[out=-50,in=100] (10);
+		\draw[dashed] (8) to[out=-125,in=80] (9);
+	\end{tikzpicture}
+	\caption{Gadgets for product as defined for an $\cD$ with the $\epsilon$-node.}
+	\label{fig:prod-multi-gadget}
+\end{figure}

@@ -1,0 +1,44 @@
+%!TEX root = ../main/main.tex
+
+\medskip
+\noindent
+\paragraph{Documents, alphabet, and spans} We fix a finite alphabet $\Sigma$. A \textbf{document} is a finite string $d = a_1 \dots a_n \in \Sigma^{*}$. A \textbf{span} is a half-open interval $[i, j \rangle$ with $1 \leq i \leq j \leq |d| +1$, it denotes the substring $d[i, j\rangle = a_i\dots a_{j-1}$. The sets of all spans of $d$ is written $Spans(d)$. (Fagin-Document Spanners...)
+
+\paragraph{Variables, markers and mappings} Let $V$ be a finite set of \textbf{variables}. For each $x\in V$ we use two \textbf{variable markers} $[x$ open and $x\rangle$ close; $Markers_V = \{ [x,x\rangle | x \in V\}$.(3361451). A \textbf{mapping} or valuation is a partial function.
+$$
+\mu : dom(\mu) \subseteq V \rightarrow Spans(d).
+$$
+Two mappings are \textbf{compatible} when they agree on their common variables. Mappings constitute thr basic tuples produced by our operators.
+
+\paragraph{Document spanners} A document spanner $P$ associates to every string $d$ a finite set of mappings over some variable set $V = SVars(P)$. (Fagin-Document Spanners...) Intuitively, a spanner "extracts" all matches of a pattern as span relations.
+
+\paragraph{Extended Variable Automata (eVA)} REmatch compiles each REQL query to an extended variable-set automaton 
+$$
+E = (Q, q_0, F, \delta),
+$$
+
+whose transitions are quadruples $(q, a, S, q')$ with $a \in \Sigma \cup \{\#\}$ and a (possibly empty) set of markers $S$. While reading the $i-th$ symbol, the automaton outputs the pair $(S,i)$; if $S = \emptyset$ nothing is produced. A run sequence
+$$
+q_0 \xrightarrow{b_0/S_0} q_1 \xrightarrow{b_1/S_1} \dots \xrightarrow{b_n/S_n} q_{n+1}
+$$
+that alternates variable transitions and letter transitions and respects marker nesting. The mapping defined by a valid accepting run is obtained by pairing every $[x$ with the corresponding $x\rangle$. Determinisation via a subset construction yields a deterministic eVA guaranteeing at most one accepting run per output sequence, a key invariant for output-linear enumeration. (Fagin-Document Spanners...)
+
+\paragraph{Determinisation of extended VA} an eVA $E = (Q, q_0, F, \delta)$ is deterministic when
+$$
+\delta : Q \times (\Sigma \cup (2^{Markers_V}\{\emptyset\}))\rightarrow Q
+$$
+is a partial function: for every state $q$ and pail $(a,S)$ there is at most one outgoing transition $(q,a,S,q')$. Determinism guarantees that, for any document $d$ and any output sequence, at most one accepting run produces it – a key property to avoid duplicates during enumeration.(paper).
+Every eVA con be turned into an equivalent deterministic eVA via the classical powerset method.
+
+\paragraph{Variable-inclusion order} for two mappings $\mu, \nu$ over the same document we write
+$$
+\mu \preccurlyeq_{var inc } \nu \Longleftrightarrow dom(\mu) \ and \ \forall x \in dom(\mu): \mu(x) = \nu(x).
+$$
+This partial order captures containment by identical spans plus extra variables and underlies the MAX selection strategy.
+
+\paragraph{MAX operator} given a spanner $P$ we define
+$$
+\llbracket MAX(P)\rrbracket_d = \{ \mu \in P(d) | \text{there is no } \nu \in P(d) \text{ with } \mu \preccurlyeq_{var inc } \nu \}
+$$
+That is, we keep only those mappings that are maximal under $\preccurlyeq_{var inc }$. (GREZ) 
+  

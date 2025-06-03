@@ -1,0 +1,324 @@
+%!TEX root = main.tex
+
+\begin{tikzpicture}[->,>=stealth',roundnode/.style={circle,draw,inner sep=1.2pt},squarednode/.style={rectangle,inner sep=3pt}]
+	
+	\node [squarednode] (0) at (1, 0) {$a_3$};
+%	\node [roundnode] (0b) at (1, 0.3) {};
+	\node [squarednode] (1) at (3, 0) {$a_4$};
+%	\node [roundnode] (1b) at (3, 0.3) {};
+	\node [squarednode] (2) at (2, 1) {$\cup$};
+%	\node [roundnode] (2b) at (2, 1.3) {};
+	\node [squarednode] (3) at (0, 1) {$a_2$};
+%	\node [roundnode] (3b) at (0, 1.3) {};
+	\node [squarednode] (4) at (1, 2) {$\cup$};
+%	\node [roundnode] (4b) at (1, 2.3) {};
+	\node [squarednode] (5) at (3, 2) {$a_5$};
+%	\node [roundnode] (5b) at (3, 2.3) {};
+	\node [squarednode] (6) at (2, 3) {$\cup$};
+%	\node [roundnode] (6b) at (2, 3.3) {};
+	\node [squarednode] (7) at (0, 3) {$a_1$};
+	\node [roundnode] (7b) at (0, 3.3) {};
+	\node [squarednode] (8) at (1, 4) {$\cup$};
+	\node [roundnode] (8b) at (1, 4.3) {};
+	\node [squarednode] (9) at (3, 4) {$a_6$};
+%	\node [roundnode] (9b) at (3, 4.3) {};
+	\node [squarednode] (10) at (2, 5) {$\cup$};
+	\node [roundnode] (10b) at (2, 5.3) {};
+	\node [squarednode] (11) at (0, 5) {$\ldots$};
+	\node [squarednode] (12) at (1, 6) {$\odot$};
+%	\node [roundnode] (12b) at (1, 6.3) {};
+	
+	\draw (2) to (0);
+	\draw (2) to (1);
+	\draw (4) to (2);
+	\draw (4) to (3);
+	\draw (6) to (4);
+	\draw (6) to (5);
+	\draw (8) to (6);
+	\draw (8) to (7);
+	\draw (10) to (8);
+	\draw (10) to (9);
+	\draw (12) to (10);
+	\draw (12) to (11);
+	
+%	\draw[dashed, -, out=200, in=70] (12b) to (10b);
+	\draw[dashed, -, out=200, in=70] (10b) to (8b);
+	\draw[dashed, -, out=200, in=70] (8b) to (7b);
+%	\draw[dashed, -, out=200, in=110] (10b) to (6b);
+%	\draw[dashed, -, out=200, in=70] (6b) to (4b);
+%	\draw[dashed, -, out=200, in=70] (4b) to (3b);
+%	\draw[dashed, -, out=200, in=110] (6b) to (2b);
+%	\draw[dashed, -, out=200, in=70] (2b) to (0b);
+%	\draw[dashed, -, out=200, in=110] (6b) to (1b);
+%	\draw[dashed, -, out=200, in=110] (10b) to (5b);
+%	\draw[dashed, -, out=200, in=110] (12b) to (9b);
+
+\end{tikzpicture}
+\begin{tikzpicture}[->,>=stealth',roundnode/.style={circle,draw,inner sep=1.2pt},squarednode/.style={rectangle,inner sep=3pt}]
+	
+	\node [squarednode] (0) at (1, 0) {$a_3$};
+%	\node [roundnode] (0b) at (1, 0.3) {};
+	\node [squarednode] (1) at (3, 0) {$a_4$};
+%	\node [roundnode] (1b) at (3, 0.3) {};
+	\node [squarednode] (2) at (2, 1) {$\cup$};
+%	\node [roundnode] (2b) at (2, 1.3) {};
+	\node [squarednode] (3) at (0, 1) {$a_2$};
+	\node [roundnode] (3b) at (0, 1.3) {};
+	\node [squarednode] (4) at (1, 2) {$\cup$};
+	\node [roundnode] (4b) at (1, 2.3) {};
+	\node [squarednode] (5) at (3, 2) {$a_5$};
+%	\node [roundnode] (5b) at (3, 2.3) {};
+	\node [squarednode] (6) at (2, 3) {$\cup$};
+	\node [roundnode] (6b) at (2, 3.3) {};
+	\node [squarednode] (7) at (0, 3) {$a_1$};
+%	\node [roundnode] (7b) at (0, 3.3) {};
+	\node [squarednode] (8) at (1, 4) {$\cup$};
+%	\node [roundnode] (8b) at (1, 4.3) {};
+	\node [squarednode] (9) at (3, 4) {$a_6$};
+%	\node [roundnode] (9b) at (3, 4.3) {};
+	\node [squarednode] (10) at (2, 5) {$\cup$};
+	\node [roundnode] (10b) at (2, 5.3) {};
+	\node [squarednode] (11) at (0, 5) {$\ldots$};
+	\node [squarednode] (12) at (1, 6) {$\odot$};
+	%	\node [roundnode] (12b) at (1, 6.3) {};
+	
+	\draw (2) to (0);
+	\draw (2) to (1);
+	\draw (4) to (2);
+	\draw (4) to (3);
+	\draw (6) to (4);
+	\draw (6) to (5);
+	\draw (8) to (6);
+	\draw (8) to (7);
+	\draw (10) to (8);
+	\draw (10) to (9);
+	\draw (12) to (10);
+	\draw (12) to (11);
+	
+%	\draw[dashed, -, out=200, in=70] (12b) to (10b);
+%	\draw[dashed, -, out=200, in=70] (10b) to (8b);
+%	\draw[dashed, -, out=200, in=70] (8b) to (7b);
+	\draw[dashed, -, out=200, in=110] (10b) to (6b);
+	\draw[dashed, -, out=200, in=70] (6b) to (4b);
+	\draw[dashed, -, out=200, in=70] (4b) to (3b);
+%	\draw[dashed, -, out=200, in=110] (6b) to (2b);
+%	\draw[dashed, -, out=200, in=70] (2b) to (0b);
+%	\draw[dashed, -, out=200, in=110] (6b) to (1b);
+%	\draw[dashed, -, out=200, in=110] (10b) to (5b);
+%	\draw[dashed, -, out=200, in=110] (12b) to (9b);
+\end{tikzpicture}
+\begin{tikzpicture}[->,>=stealth',roundnode/.style={circle,draw,inner sep=1.2pt},squarednode/.style={rectangle,inner sep=3pt}]
+	
+	\node [squarednode] (0) at (1, 0) {$a_3$};
+	\node [roundnode] (0b) at (1, 0.3) {};
+	\node [squarednode] (1) at (3, 0) {$a_4$};
+%	\node [roundnode] (1b) at (3, 0.3) {};
+	\node [squarednode] (2) at (2, 1) {$\cup$};
+	\node [roundnode] (2b) at (2, 1.3) {};
+	\node [squarednode] (3) at (0, 1) {$a_2$};
+%	\node [roundnode] (3b) at (0, 1.3) {};
+	\node [squarednode] (4) at (1, 2) {$\cup$};
+%	\node [roundnode] (4b) at (1, 2.3) {};
+	\node [squarednode] (5) at (3, 2) {$a_5$};
+%	\node [roundnode] (5b) at (3, 2.3) {};
+	\node [squarednode] (6) at (2, 3) {$\cup$};
+	\node [roundnode] (6b) at (2, 3.3) {};
+	\node [squarednode] (7) at (0, 3) {$a_1$};
+%	\node [roundnode] (7b) at (0, 3.3) {};
+	\node [squarednode] (8) at (1, 4) {$\cup$};
+%	\node [roundnode] (8b) at (1, 4.3) {};
+	\node [squarednode] (9) at (3, 4) {$a_6$};
+%	\node [roundnode] (9b) at (3, 4.3) {};
+	\node [squarednode] (10) at (2, 5) {$\cup$};
+	\node [roundnode] (10b) at (2, 5.3) {};
+	\node [squarednode] (11) at (0, 5) {$\ldots$};
+	\node [squarednode] (12) at (1, 6) {$\odot$};
+	%	\node [roundnode] (12b) at (1, 6.3) {};
+	
+	\draw (2) to (0);
+	\draw (2) to (1);
+	\draw (4) to (2);
+	\draw (4) to (3);
+	\draw (6) to (4);
+	\draw (6) to (5);
+	\draw (8) to (6);
+	\draw (8) to (7);
+	\draw (10) to (8);
+	\draw (10) to (9);
+	\draw (12) to (10);
+	\draw (12) to (11);
+	
+%	\draw[dashed, -, out=200, in=70] (12b) to (10b);
+%	\draw[dashed, -, out=200, in=70] (10b) to (8b);
+%	\draw[dashed, -, out=200, in=70] (8b) to (7b);
+	\draw[dashed, -, out=200, in=110] (10b) to (6b);
+%	\draw[dashed, -, out=200, in=70] (6b) to (4b);
+%	\draw[dashed, -, out=200, in=70] (4b) to (3b);
+	\draw[dashed, -, out=200, in=110] (6b) to (2b);
+	\draw[dashed, -, out=200, in=70] (2b) to (0b);
+%	\draw[dashed, -, out=200, in=110] (6b) to (1b);
+%	\draw[dashed, -, out=200, in=110] (10b) to (5b);
+%	\draw[dashed, -, out=200, in=110] (12b) to (9b);
+\end{tikzpicture}
+
+\vspace{1em}
+
+\begin{tikzpicture}[->,>=stealth',roundnode/.style={circle,draw,inner sep=1.2pt},squarednode/.style={rectangle,inner sep=3pt}]
+	
+	\node [squarednode] (0) at (1, 0) {$a_3$};
+%	\node [roundnode] (0b) at (1, 0.3) {};
+	\node [squarednode] (1) at (3, 0) {$a_4$};
+	\node [roundnode] (1b) at (3, 0.3) {};
+	\node [squarednode] (2) at (2, 1) {$\cup$};
+%	\node [roundnode] (2b) at (2, 1.3) {};
+	\node [squarednode] (3) at (0, 1) {$a_2$};
+%	\node [roundnode] (3b) at (0, 1.3) {};
+	\node [squarednode] (4) at (1, 2) {$\cup$};
+%	\node [roundnode] (4b) at (1, 2.3) {};
+	\node [squarednode] (5) at (3, 2) {$a_5$};
+%	\node [roundnode] (5b) at (3, 2.3) {};
+	\node [squarednode] (6) at (2, 3) {$\cup$};
+	\node [roundnode] (6b) at (2, 3.3) {};
+	\node [squarednode] (7) at (0, 3) {$a_1$};
+%	\node [roundnode] (7b) at (0, 3.3) {};
+	\node [squarednode] (8) at (1, 4) {$\cup$};
+%	\node [roundnode] (8b) at (1, 4.3) {};
+	\node [squarednode] (9) at (3, 4) {$a_6$};
+%	\node [roundnode] (9b) at (3, 4.3) {};
+	\node [squarednode] (10) at (2, 5) {$\cup$};
+	\node [roundnode] (10b) at (2, 5.3) {};
+	\node [squarednode] (11) at (0, 5) {$\ldots$};
+	\node [squarednode] (12) at (1, 6) {$\odot$};
+	%	\node [roundnode] (12b) at (1, 6.3) {};
+	
+	\draw (2) to (0);
+	\draw (2) to (1);
+	\draw (4) to (2);
+	\draw (4) to (3);
+	\draw (6) to (4);
+	\draw (6) to (5);
+	\draw (8) to (6);
+	\draw (8) to (7);
+	\draw (10) to (8);
+	\draw (10) to (9);
+	\draw (12) to (10);
+	\draw (12) to (11);
+	
+%	\draw[dashed, -, out=200, in=70] (12b) to (10b);
+%	\draw[dashed, -, out=200, in=70] (10b) to (8b);
+%	\draw[dashed, -, out=200, in=70] (8b) to (7b);
+	\draw[dashed, -, out=200, in=110] (10b) to (6b);
+%	\draw[dashed, -, out=200, in=70] (6b) to (4b);
+%	\draw[dashed, -, out=200, in=70] (4b) to (3b);
+%	\draw[dashed, -, out=200, in=110] (6b) to (2b);
+%	\draw[dashed, -, out=200, in=70] (2b) to (0b);
+	\draw[dashed, -, out=200, in=110] (6b) to (1b);
+%	\draw[dashed, -, out=200, in=110] (10b) to (5b);
+%	\draw[dashed, -, out=200, in=110] (12b) to (9b);
+\end{tikzpicture}
+\begin{tikzpicture}[->,>=stealth',roundnode/.style={circle,draw,inner sep=1.2pt},squarednode/.style={rectangle,inner sep=3pt}]
+	
+	\node [squarednode] (0) at (1, 0) {$a_3$};
+%	\node [roundnode] (0b) at (1, 0.3) {};
+	\node [squarednode] (1) at (3, 0) {$a_4$};
+%	\node [roundnode] (1b) at (3, 0.3) {};
+	\node [squarednode] (2) at (2, 1) {$\cup$};
+%	\node [roundnode] (2b) at (2, 1.3) {};
+	\node [squarednode] (3) at (0, 1) {$a_2$};
+%	\node [roundnode] (3b) at (0, 1.3) {};
+	\node [squarednode] (4) at (1, 2) {$\cup$};
+%	\node [roundnode] (4b) at (1, 2.3) {};
+	\node [squarednode] (5) at (3, 2) {$a_5$};
+	\node [roundnode] (5b) at (3, 2.3) {};
+	\node [squarednode] (6) at (2, 3) {$\cup$};
+%	\node [roundnode] (6b) at (2, 3.3) {};
+	\node [squarednode] (7) at (0, 3) {$a_1$};
+%	\node [roundnode] (7b) at (0, 3.3) {};
+	\node [squarednode] (8) at (1, 4) {$\cup$};
+%	\node [roundnode] (8b) at (1, 4.3) {};
+	\node [squarednode] (9) at (3, 4) {$a_6$};
+%	\node [roundnode] (9b) at (3, 4.3) {};
+	\node [squarednode] (10) at (2, 5) {$\cup$};
+	\node [roundnode] (10b) at (2, 5.3) {};
+	\node [squarednode] (11) at (0, 5) {$\ldots$};
+	\node [squarednode] (12) at (1, 6) {$\odot$};
+	%	\node [roundnode] (12b) at (1, 6.3) {};
+	
+	\draw (2) to (0);
+	\draw (2) to (1);
+	\draw (4) to (2);
+	\draw (4) to (3);
+	\draw (6) to (4);
+	\draw (6) to (5);
+	\draw (8) to (6);
+	\draw (8) to (7);
+	\draw (10) to (8);
+	\draw (10) to (9);
+	\draw (12) to (10);
+	\draw (12) to (11);
+	
+%	\draw[dashed, -, out=200, in=70] (12b) to (10b);
+%	\draw[dashed, -, out=200, in=70] (10b) to (8b);
+%	\draw[dashed, -, out=200, in=70] (8b) to (7b);
+%	\draw[dashed, -, out=200, in=110] (10b) to (6b);
+%	\draw[dashed, -, out=200, in=70] (6b) to (4b);
+%	\draw[dashed, -, out=200, in=70] (4b) to (3b);
+%	\draw[dashed, -, out=200, in=110] (6b) to (2b);
+%	\draw[dashed, -, out=200, in=70] (2b) to (0b);
+%	\draw[dashed, -, out=200, in=110] (6b) to (1b);
+	\draw[dashed, -, out=200, in=110] (10b) to (5b);
+%	\draw[dashed, -, out=200, in=110] (12b) to (9b);
+\end{tikzpicture}
+\begin{tikzpicture}[->,>=stealth',roundnode/.style={circle,draw,inner sep=1.2pt},squarednode/.style={rectangle,inner sep=3pt}]
+
+\node [squarednode] (0) at (1, 0) {$a_3$};
+%\node [roundnode] (0b) at (1, 0.3) {};
+\node [squarednode] (1) at (3, 0) {$a_4$};
+%\node [roundnode] (1b) at (3, 0.3) {};
+\node [squarednode] (2) at (2, 1) {$\cup$};
+%\node [roundnode] (2b) at (2, 1.3) {};
+\node [squarednode] (3) at (0, 1) {$a_2$};
+%\node [roundnode] (3b) at (0, 1.3) {};
+\node [squarednode] (4) at (1, 2) {$\cup$};
+%\node [roundnode] (4b) at (1, 2.3) {};
+\node [squarednode] (5) at (3, 2) {$a_5$};
+%\node [roundnode] (5b) at (3, 2.3) {};
+\node [squarednode] (6) at (2, 3) {$\cup$};
+%\node [roundnode] (6b) at (2, 3.3) {};
+\node [squarednode] (7) at (0, 3) {$a_1$};
+%\node [roundnode] (7b) at (0, 3.3) {};
+\node [squarednode] (8) at (1, 4) {$\cup$};
+%\node [roundnode] (8b) at (1, 4.3) {};
+\node [squarednode] (9) at (3, 4) {$a_6$};
+\node [roundnode] (9b) at (3, 4.3) {};
+\node [squarednode] (10) at (2, 5) {$\cup$};
+%\node [roundnode] (10b) at (2, 5.3) {};
+\node [squarednode] (11) at (0, 5) {$\ldots$};
+\node [squarednode] (12) at (1, 6) {$\odot$};
+%	\node [roundnode] (12b) at (1, 6.3) {};
+
+\draw (2) to (0);
+\draw (2) to (1);
+\draw (4) to (2);
+\draw (4) to (3);
+\draw (6) to (4);
+\draw (6) to (5);
+\draw (8) to (6);
+\draw (8) to (7);
+\draw (10) to (8);
+\draw (10) to (9);
+\draw (12) to (10);
+\draw (12) to (11);
+
+%\draw[dashed, -, out=200, in=70] (12b) to (10b);
+%\draw[dashed, -, out=200, in=70] (10b) to (8b);
+%\draw[dashed, -, out=200, in=70] (8b) to (7b);
+%\draw[dashed, -, out=200, in=110] (10b) to (6b);
+%\draw[dashed, -, out=200, in=70] (6b) to (4b);
+%\draw[dashed, -, out=200, in=70] (4b) to (3b);
+%\draw[dashed, -, out=200, in=110] (6b) to (2b);
+%\draw[dashed, -, out=200, in=70] (2b) to (0b);
+%\draw[dashed, -, out=200, in=110] (6b) to (1b);
+%\draw[dashed, -, out=200, in=110] (10b) to (5b);
+%\draw[dashed, -, out=200, in=110] (12b) to (9b);
+\end{tikzpicture}

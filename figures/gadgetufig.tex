@@ -1,0 +1,23 @@
+%!TEX root = main.tex
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[every label/.style={black!60}, ->,>=stealth',roundnode/.style={circle,inner sep=1pt},squarednode/.style={rectangle,inner sep=2pt}, scale=0.85]
+		\node[squarednode] (0) at (0, 0) {$\ell(v_3)$};
+		\node[squarednode, draw, label=180:\footnotesize{$v_3\!:$}] (2) at (2, 1) {$k_1$};
+		\node[squarednode] (3) at (4, 0) {$\ell(v_4)$};
+		\node[squarednode, draw, label=180:\footnotesize{$v_4\!:$}] (5) at (6, 1) {$k_2$};
+		\node[squarednode, label=180:\footnotesize{$v'''\!:$}] (7) at (5.5, 1.7) {$(k_2-k_1)$};
+		\node[squarednode, label=180:\footnotesize{$v''\!:$}] (8) at (3, 2.6) {$\cup$};
+		\node[squarednode, draw, label=180:\footnotesize{$v'\!:$}] (9) at (4.5, 3.6) {$k_1$};
+		\draw[dashed] (2.south west) to[out=-135,in=45] (0);
+		\draw[dashed] (5.south west) to[out=-135,in=45] (3);
+		\draw[dashed] (7.south west) to[out=-135,in=90] (3);
+		\draw (8) to[out=-45,in=135] (7.north west);
+		\draw[dashed] (8) to[out=-135,in=90] (0);
+		\draw[dashed] (9.south west) to[out=-135,in=90] (8);
+		
+	\end{tikzpicture}
+	\caption{Gadget used in Theorem~\ref{theo:mytheorem}.}
+	\label{fig-theo-ds}
+\end{figure}
