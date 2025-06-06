@@ -30,11 +30,11 @@ $$
 is a partial function: for every state $q$ and pail $(a,S)$ there is at most one outgoing transition $(q,a,S,q')$. Determinism guarantees that, for any document $d$ and any output sequence, at most one accepting run produces it – a key property to avoid duplicates during enumeration.(paper).
 Every eVA con be turned into an equivalent deterministic eVA via the classical powerset method.
 
-\paragraph{Variable-inclusion order} for two mappings $\mu, \nu$ over the same document we write
+\paragraph{Variable-inclusion order} let  $V$ be a finite set of variables, for two mappings $\mu, \nu$ over the same document we write
 $$
-\mu \preccurlyeq_{var inc } \nu \Longleftrightarrow dom(\mu) \ and \ \forall x \in dom(\mu): \mu(x) = \nu(x).
+\mu \preccurlyeq_{var inc } \nu
 $$
-This partial order captures containment by identical spans plus extra variables and underlies the MAX selection strategy.
+If for all $x \in V$, if $\mu(x)$ is defined, then $\nu(x)$ is defined and  $\mu(x) = \nu(x)$.
 
 \paragraph{MAX operator} given a spanner $P$ we define
 $$
