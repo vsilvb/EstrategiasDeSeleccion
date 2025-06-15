@@ -1,0 +1,13 @@
+*.log
+*.fls
+*.out
+*.synctex.gz
+*.vtc
+*.fdb_latexmk
+*.aux
+main/main.pdf
+# *.pdf
+*.bbl
+*.blg
+*.DS_STORE
+*.vscode
