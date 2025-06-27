@@ -73,3 +73,26 @@ $$
            W\cap F_{\det}= \emptyset \bigr\}.
 $$
 
+\begin{proposition}\label{prop:myproposition}
+	Let \(E_{\det}=(2^{Q},X_{0},F_{\det},\Delta)\) be the deterministic eVA
+	obtained from an eVA \(E\), and let
+	\(E_{\max}=(Q_{\max},(R_{0},W_{0}),F_{\max},\Delta_{\max})\) be its
+	\(\textsc{MAX}\)–product automaton as defined above.  Then for every
+	document \(d\),
+	\[
+	\bigl\llbracket E_{\max}\bigr\rrbracket_{d}
+	\;=\;
+	\Bigl\{
+	\mu \in \llbracket E_{\det}\rrbracket_{d}
+	\;\Bigm|\;
+	\not\exists\,\nu\in\llbracket E_{\det}\rrbracket_{d}:
+	\mu \prec_{\mathrm{varInc}}\nu
+	\Bigr\}
+	\;=\;
+	\textsc{Max}\bigl(\llbracket E_{\det}\rrbracket_{d}\bigr).
+	\]
+	That is, \(E_{\max}\) accepts exactly the maximal mappings under
+	variable–inclusion.
+\end{proposition}
+
+
