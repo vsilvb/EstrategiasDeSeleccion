@@ -1,7 +1,23 @@
 %!TEX root = ../main/main.tex
 
 \begin{abstract}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+	Algebraic frameworks for information extraction model a document as a
+	finite string and pattern matches as \emph{mappings} that bind variables
+	to spans.  While recent automata-based techniques can enumerate \emph{all}
+	mappings with delay linear in the size of each output, practical
+	applications do not always require the full result: many mappings are redundant
+	because they are \emph{strictly extended} by others that capture
+	additional variables without altering previously assigned spans.
+	The \emph{variable-inclusion skyline} (or \textsf{MAX}) operator removes
+	this redundancy, retaining only maximal mappings.
+	
+	We provide a evaluation scheme that integrates \textsf{MAX}
+	\emph{during} enumeration while preserving output-linear delay.
+	Starting from a deterministic extended variable automaton (eVA)~$E$, we
+	construct a product automaton $E_{\max}$ whose state pairs keep, in
+	lock-step, a candidate run and a bounded set of dominating witnesses.
+	A mapping is output exactly when no witness can still reach
+	acceptance. These results establish that skyline selection can be
+	incorporated into automata-based text extraction without sacrificing
+	enumeration performance.
 \end{abstract}
